@@ -1,0 +1,650 @@
+<?xml version="1.0"?>
+<robot name="naranjelio" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find naranjelio_description)/urdf/materials.xacro" />
+  <xacro:include filename="$(find naranjelio_description)/urdf/naranjelio.trans" />
+  <xacro:include filename="$(find naranjelio_description)/urdf/naranjelio.gazebo" />
+  <link name="base_link">
+    <inertial>
+      <origin xyz="-0.0007323528873945663 3.509621167612845e-05 0.08683341433798272" rpy="0 0 0" />
+      <mass value="0.6934169032732499" />
+      <inertia ixx="0.009153" iyy="0.001543" izz="0.009752" ixy="0.0" iyz="1e-06" ixz="-0.0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find naranjelio_description)/meshes/base_link.stl"
+          scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find naranjelio_description)/meshes/base_link.stl"
+          scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="FrontIzq_1">
+    <inertial>
+      <origin xyz="0.028685015270352804 0.03116662630232471 -0.0006386163483630691" rpy="0 0 0" />
+      <mass value="0.08985874026730178" />
+      <inertia ixx="6.4e-05" iyy="6.8e-05" izz="8.5e-05" ixy="-0.0" iyz="0.0" ixz="-0.0" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.067106 0.1327 -0.072322" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find naranjelio_description)/meshes/FrontIzq_1.stl"
+          scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+    <collision>
+      <origin xyz="-0.067106 0.1327 -0.072322" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find naranjelio_description)/meshes/FrontIzq_1.stl"
+          scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="FrontDer_1">
+    <inertial>
+      <origin xyz="-0.028685619247571653 0.031258888699007836 -0.0006386163483728391" rpy="0 0 0" />
+      <mass value="0.08985874026512791" />
+      <inertia ixx="6.4e-05" iyy="6.8e-05" izz="8.5e-05" ixy="0.0" iyz="-0.0" ixz="0.0" />
+    </inertial>
+    <visual>
+      <origin xyz="0.068594 0.1327 -0.072322" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find naranjelio_description)/meshes/FrontDer_1.stl"
+          scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+    <collision>
+      <origin xyz="0.068594 0.1327 -0.072322" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find naranjelio_description)/meshes/FrontDer_1.stl"
+          scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="BackIzq_1">
+    <inertial>
+      <origin xyz="0.028685015270281236 -0.03125888869900853 -0.000638616348372853" rpy="0 0 0" />
+      <mass value="0.08985874026512496" />
+      <inertia ixx="6.4e-05" iyy="6.8e-05" izz="8.5e-05" ixy="0.0" iyz="0.0" ixz="-0.0" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.067106 -0.1327 -0.072322" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find naranjelio_description)/meshes/BackIzq_1.stl"
+          scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+    <collision>
+      <origin xyz="-0.067106 -0.1327 -0.072322" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find naranjelio_description)/meshes/BackIzq_1.stl"
+          scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="BackDer_1">
+    <inertial>
+      <origin xyz="-0.028685619247639738 -0.0311666263023255 -0.0006386163483644014" rpy="0 0 0" />
+      <mass value="0.08985874026730326" />
+      <inertia ixx="6.4e-05" iyy="6.8e-05" izz="8.5e-05" ixy="-0.0" iyz="-0.0" ixz="0.0" />
+    </inertial>
+    <visual>
+      <origin xyz="0.068594 -0.1327 -0.072322" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find naranjelio_description)/meshes/BackDer_1.stl"
+          scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+    <collision>
+      <origin xyz="0.068594 -0.1327 -0.072322" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find naranjelio_description)/meshes/BackDer_1.stl"
+          scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="FemurFrontIzq_1">
+    <inertial>
+      <origin xyz="0.006376643247794661 0.02492141158743512 -0.012172903048014778" rpy="0 0 0" />
+      <mass value="0.008110524022753801" />
+      <inertia ixx="8e-06" iyy="2e-06" izz="6e-06" ixy="0.0" iyz="3e-06" ixz="-0.0" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.087356 0.111039 -0.072347" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find naranjelio_description)/meshes/FemurFrontIzq_1.stl"
+          scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+    <collision>
+      <origin xyz="-0.087356 0.111039 -0.072347" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find naranjelio_description)/meshes/FemurFrontIzq_1.stl"
+          scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="FemurBackIzq_1">
+    <inertial>
+      <origin xyz="0.006376643247734987 -0.024926951699854635 -0.012161594144430132" rpy="0 0 0" />
+      <mass value="0.008110523916728195" />
+      <inertia ixx="8e-06" iyy="2e-06" izz="6e-06" ixy="-0.0" iyz="-3e-06" ixz="-0.0" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.087356 -0.111039 -0.072297" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find naranjelio_description)/meshes/FemurBackIzq_1.stl"
+          scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+    <collision>
+      <origin xyz="-0.087356 -0.111039 -0.072297" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find naranjelio_description)/meshes/FemurBackIzq_1.stl"
+          scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="FemurFrontDer_1">
+    <inertial>
+      <origin xyz="-0.00637724728692983 0.024926951699869304 -0.01216159414444764" rpy="0 0 0" />
+      <mass value="0.008110523916726856" />
+      <inertia ixx="8e-06" iyy="2e-06" izz="6e-06" ixy="-0.0" iyz="3e-06" ixz="0.0" />
+    </inertial>
+    <visual>
+      <origin xyz="0.088844 0.111039 -0.072297" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find naranjelio_description)/meshes/FemurFrontDer_1.stl"
+          scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+    <collision>
+      <origin xyz="0.088844 0.111039 -0.072297" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find naranjelio_description)/meshes/FemurFrontDer_1.stl"
+          scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="FemurBackDer_1">
+    <inertial>
+      <origin xyz="-0.006377247287474602 -0.024921411587462472 -0.012172903048018269" rpy="0 0 0" />
+      <mass value="0.008110524022753404" />
+      <inertia ixx="8e-06" iyy="2e-06" izz="6e-06" ixy="0.0" iyz="-3e-06" ixz="0.0" />
+    </inertial>
+    <visual>
+      <origin xyz="0.088844 -0.111039 -0.072347" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find naranjelio_description)/meshes/FemurBackDer_1.stl"
+          scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+    <collision>
+      <origin xyz="0.088844 -0.111039 -0.072347" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find naranjelio_description)/meshes/FemurBackDer_1.stl"
+          scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="TibiaLowFrontIzq_1">
+    <inertial>
+      <origin xyz="0.0027221835545991196 -0.056937041129338714 -0.0159849877665902" rpy="0 0 0" />
+      <mass value="0.01266213988328845" />
+      <inertia ixx="1.7e-05" iyy="2e-06" izz="1.6e-05" ixy="-0.0" iyz="-4e-06" ixz="-0.0" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.096256 0.034663 -0.03504" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find naranjelio_description)/meshes/TibiaLowFrontIzq_1.stl"
+          scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+    <collision>
+      <origin xyz="-0.096256 0.034663 -0.03504" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find naranjelio_description)/meshes/TibiaLowFrontIzq_1.stl"
+          scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="TibiaLowBackIzq_1">
+    <inertial>
+      <origin xyz="0.002722115468575953 0.05703399714644968 -0.016217300952275502" rpy="0 0 0" />
+      <mass value="0.012700597370382169" />
+      <inertia ixx="1.7e-05" iyy="2e-06" izz="1.6e-05" ixy="0.0" iyz="4e-06" ixz="-0.0" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.096256 -0.034646 -0.035027" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find naranjelio_description)/meshes/TibiaLowBackIzq_1.stl"
+          scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+    <collision>
+      <origin xyz="-0.096256 -0.034646 -0.035027" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find naranjelio_description)/meshes/TibiaLowBackIzq_1.stl"
+          scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="TibiaLowFrontDer_1">
+    <inertial>
+      <origin xyz="-0.002722719518923236 -0.05703399714645422 -0.016217300952278614" rpy="0 0 0" />
+      <mass value="0.012700597370379355" />
+      <inertia ixx="1.7e-05" iyy="2e-06" izz="1.6e-05" ixy="0.0" iyz="-4e-06" ixz="0.0" />
+    </inertial>
+    <visual>
+      <origin xyz="0.097744 0.034646 -0.035027" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find naranjelio_description)/meshes/TibiaLowFrontDer_1.stl"
+          scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+    <collision>
+      <origin xyz="0.097744 0.034646 -0.035027" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find naranjelio_description)/meshes/TibiaLowFrontDer_1.stl"
+          scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="TibiaLowBackDer_1">
+    <inertial>
+      <origin xyz="-0.002722787604946819 0.05693704112934389 -0.015984987766591182" rpy="0 0 0" />
+      <mass value="0.01266213988328561" />
+      <inertia ixx="1.7e-05" iyy="2e-06" izz="1.6e-05" ixy="-0.0" iyz="4e-06" ixz="0.0" />
+    </inertial>
+    <visual>
+      <origin xyz="0.097744 -0.034663 -0.03504" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find naranjelio_description)/meshes/TibiaLowBackDer_1.stl"
+          scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+    <collision>
+      <origin xyz="0.097744 -0.034663 -0.03504" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find naranjelio_description)/meshes/TibiaLowBackDer_1.stl"
+          scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="TibiaHighFrontIzq_1">
+    <inertial>
+      <origin xyz="0.0014759437758350147 -0.03802032808698009 0.013838018124668595" rpy="0 0 0" />
+      <mass value="0.005868733435624695" />
+      <inertia ixx="3e-06" iyy="1e-06" izz="3e-06" ixy="-0.0" iyz="1e-06" ixz="0.0" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.101756 0.015408 -0.040447" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find naranjelio_description)/meshes/TibiaHighFrontIzq_1.stl"
+          scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+    <collision>
+      <origin xyz="-0.101756 0.015408 -0.040447" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find naranjelio_description)/meshes/TibiaHighFrontIzq_1.stl"
+          scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="PivotTibiaFrontIzq_1">
+    <inertial>
+      <origin xyz="0.0016921596049667281 -0.015756854381915097 0.002778854381984844" rpy="0 0 0" />
+      <mass value="0.0007780427273559296" />
+      <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="0.0" ixz="-0.0" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.104256 0.095282 -0.069518" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find naranjelio_description)/meshes/PivotTibiaFrontIzq_1.stl"
+          scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+    <collision>
+      <origin xyz="-0.104256 0.095282 -0.069518" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find naranjelio_description)/meshes/PivotTibiaFrontIzq_1.stl"
+          scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="PivotTibiaBackIzq_1">
+    <inertial>
+      <origin xyz="0.0016921596049660897 0.01570761399426379 0.0027701719731016983" rpy="0 0 0" />
+      <mass value="0.0007780427273559296" />
+      <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="-0.0" iyz="-0.0" ixz="-0.0" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.104256 -0.095282 -0.069568" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find naranjelio_description)/meshes/PivotTibiaBackIzq_1.stl"
+          scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+    <collision>
+      <origin xyz="-0.104256 -0.095282 -0.069568" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find naranjelio_description)/meshes/PivotTibiaBackIzq_1.stl"
+          scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="TIbiaHighBackIzq_1">
+    <inertial>
+      <origin xyz="0.0014759437758342514 0.038020328086979735 0.013838018124667562" rpy="0 0 0" />
+      <mass value="0.005868733435624695" />
+      <inertia ixx="3e-06" iyy="1e-06" izz="3e-06" ixy="0.0" iyz="-1e-06" ixz="0.0" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.101756 -0.015408 -0.040497" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find naranjelio_description)/meshes/TIbiaHighBackIzq_1.stl"
+          scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+    <collision>
+      <origin xyz="-0.101756 -0.015408 -0.040497" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find naranjelio_description)/meshes/TIbiaHighBackIzq_1.stl"
+          scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="PivotTibiaFrontDer_1">
+    <inertial>
+      <origin xyz="-0.0016927636553132758 -0.015707613994264652 0.0027701719731016428" rpy="0 0 0" />
+      <mass value="0.0007780427273559296" />
+      <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="-0.0" iyz="0.0" ixz="0.0" />
+    </inertial>
+    <visual>
+      <origin xyz="0.105744 0.095282 -0.069568" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find naranjelio_description)/meshes/PivotTibiaFrontDer_1.stl"
+          scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+    <collision>
+      <origin xyz="0.105744 0.095282 -0.069568" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find naranjelio_description)/meshes/PivotTibiaFrontDer_1.stl"
+          scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="TibiaHighFrontDer_1">
+    <inertial>
+      <origin xyz="-0.0014765478261815623 -0.038020328086980484 0.013838018124667666" rpy="0 0 0" />
+      <mass value="0.005868733435624695" />
+      <inertia ixx="3e-06" iyy="1e-06" izz="3e-06" ixy="0.0" iyz="1e-06" ixz="-0.0" />
+    </inertial>
+    <visual>
+      <origin xyz="0.103244 0.015408 -0.040497" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find naranjelio_description)/meshes/TibiaHighFrontDer_1.stl"
+          scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+    <collision>
+      <origin xyz="0.103244 0.015408 -0.040497" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find naranjelio_description)/meshes/TibiaHighFrontDer_1.stl"
+          scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="PivotTibiaBackDer_1">
+    <inertial>
+      <origin xyz="-0.0016927636553140252 0.01575685438191518 0.002778854381985024" rpy="0 0 0" />
+      <mass value="0.0007780427273559296" />
+      <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="-0.0" ixz="0.0" />
+    </inertial>
+    <visual>
+      <origin xyz="0.105744 -0.095282 -0.069518" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find naranjelio_description)/meshes/PivotTibiaBackDer_1.stl"
+          scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+    <collision>
+      <origin xyz="0.105744 -0.095282 -0.069518" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find naranjelio_description)/meshes/PivotTibiaBackDer_1.stl"
+          scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="TibiaHighBackDer_1">
+    <inertial>
+      <origin xyz="-0.0014765478261826864 0.03802032808698029 0.013838018124667825" rpy="0 0 0" />
+      <mass value="0.005868733435624695" />
+      <inertia ixx="3e-06" iyy="1e-06" izz="3e-06" ixy="-0.0" iyz="-1e-06" ixz="-0.0" />
+    </inertial>
+    <visual>
+      <origin xyz="0.103244 -0.015408 -0.040447" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find naranjelio_description)/meshes/TibiaHighBackDer_1.stl"
+          scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="silver" />
+    </visual>
+    <collision>
+      <origin xyz="0.103244 -0.015408 -0.040447" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="file://$(find naranjelio_description)/meshes/TibiaHighBackDer_1.stl"
+          scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="HipFrontIzq" type="revolute">
+    <origin xyz="0.067106 -0.1327 0.072322" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="FrontIzq_1" />
+    <axis xyz="0.0 1.0 0.0" />
+    <limit lower="-3.14159" upper="3.14159" effort="10.0" velocity="5.0" />
+  </joint>
+
+  <joint name="HipFrontDer" type="revolute">
+    <origin xyz="-0.068594 -0.1327 0.072322" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="FrontDer_1" />
+    <axis xyz="0.0 1.0 0.0" />
+    <limit lower="-3.14159" upper="3.14159" effort="10.0" velocity="5.0" />
+  </joint>
+
+  <joint name="HipBackIzq" type="revolute">
+    <origin xyz="0.067106 0.1327 0.072322" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="BackIzq_1" />
+    <axis xyz="-0.0 -1.0 0.0" />
+    <limit lower="-3.14159" upper="3.14159" effort="10.0" velocity="5.0" />
+  </joint>
+
+  <joint name="HipBackDer" type="revolute">
+    <origin xyz="-0.068594 0.1327 0.072322" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="BackDer_1" />
+    <axis xyz="-0.0 -1.0 0.0" />
+    <limit lower="-3.14159" upper="3.14159" effort="10.0" velocity="5.0" />
+  </joint>
+
+  <joint name="FemurFrontIzq" type="revolute">
+    <origin xyz="0.02025 0.021661 2.5e-05" rpy="0 0 0" />
+    <parent link="FrontIzq_1" />
+    <child link="FemurFrontIzq_1" />
+    <axis xyz="1.0 -0.0 -0.0" />
+    <limit lower="-3.14159" upper="3.14159" effort="10.0" velocity="5.0" />
+  </joint>
+
+  <joint name="FemurBackIzq" type="revolute">
+    <origin xyz="0.02025 -0.021661 -2.5e-05" rpy="0 0 0" />
+    <parent link="BackIzq_1" />
+    <child link="FemurBackIzq_1" />
+    <axis xyz="1.0 -0.0 0.0" />
+    <limit lower="-3.14159" upper="3.14159" effort="10.0" velocity="5.0" />
+  </joint>
+
+  <joint name="FemurFrontDer" type="revolute">
+    <origin xyz="-0.02025 0.021661 -2.5e-05" rpy="0 0 0" />
+    <parent link="FrontDer_1" />
+    <child link="FemurFrontDer_1" />
+    <axis xyz="-1.0 0.0 0.0" />
+    <limit lower="-3.14159" upper="3.14159" effort="10.0" velocity="5.0" />
+  </joint>
+
+  <joint name="FemurBackDer" type="revolute">
+    <origin xyz="-0.02025 -0.021661 2.5e-05" rpy="0 0 0" />
+    <parent link="BackDer_1" />
+    <child link="FemurBackDer_1" />
+    <axis xyz="-1.0 -0.0 0.0" />
+    <limit lower="-3.14159" upper="3.14159" effort="10.0" velocity="5.0" />
+  </joint>
+
+  <joint name="FemurTibiaFrontIzq" type="revolute">
+    <origin xyz="0.0089 0.076376 -0.037307" rpy="0 0 0" />
+    <parent link="FemurFrontIzq_1" />
+    <child link="TibiaLowFrontIzq_1" />
+    <axis xyz="1.0 -0.0 -0.0" />
+    <limit lower="-3.14159" upper="3.14159" effort="10.0" velocity="5.0" />
+  </joint>
+
+  <joint name="FemurTibiaBackIzq" type="revolute">
+    <origin xyz="0.0089 -0.076393 -0.03727" rpy="0 0 0" />
+    <parent link="FemurBackIzq_1" />
+    <child link="TibiaLowBackIzq_1" />
+    <axis xyz="1.0 0.0 0.0" />
+    <limit lower="-3.14159" upper="3.14159" effort="10.0" velocity="5.0" />
+  </joint>
+
+  <joint name="FemurTibiaFrontDer" type="revolute">
+    <origin xyz="-0.0089 0.076393 -0.03727" rpy="0 0 0" />
+    <parent link="FemurFrontDer_1" />
+    <child link="TibiaLowFrontDer_1" />
+    <axis xyz="-1.0 0.0 0.0" />
+    <limit lower="-3.14159" upper="3.14159" effort="10.0" velocity="5.0" />
+  </joint>
+
+  <joint name="FemurTibiaBackDer" type="revolute">
+    <origin xyz="-0.0089 -0.076376 -0.037307" rpy="0 0 0" />
+    <parent link="FemurBackDer_1" />
+    <child link="TibiaLowBackDer_1" />
+    <axis xyz="-1.0 0.0 0.0" />
+    <limit lower="-3.14159" upper="3.14159" effort="10.0" velocity="5.0" />
+  </joint>
+
+  <joint name="Revolute 45" type="revolute">
+    <origin xyz="0.0055 0.019255 0.005407" rpy="0 0 0" />
+    <parent link="TibiaLowFrontIzq_1" />
+    <child link="TibiaHighFrontIzq_1" />
+    <axis xyz="1.0 0.0 0.0" />
+    <limit lower="-3.14159" upper="3.14159" effort="10.0" velocity="5.0" />
+  </joint>
+
+  <joint name="Revolute 46" type="revolute">
+    <origin xyz="0.0025 -0.079874 0.029071" rpy="0 0 0" />
+    <parent link="TibiaHighFrontIzq_1" />
+    <child link="PivotTibiaFrontIzq_1" />
+    <axis xyz="1.0 -0.0 -0.0" />
+    <limit lower="-3.14159" upper="3.14159" effort="10.0" velocity="5.0" />
+  </joint>
+
+  <joint name="Revolute 47" type="revolute">
+    <origin xyz="0.0025 0.079874 0.029071" rpy="0 0 0" />
+    <parent link="TIbiaHighBackIzq_1" />
+    <child link="PivotTibiaBackIzq_1" />
+    <axis xyz="1.0 -0.0 0.0" />
+    <limit lower="-3.14159" upper="3.14159" effort="10.0" velocity="5.0" />
+  </joint>
+
+  <joint name="Revolute 48" type="revolute">
+    <origin xyz="0.0055 -0.019238 0.00547" rpy="0 0 0" />
+    <parent link="TibiaLowBackIzq_1" />
+    <child link="TIbiaHighBackIzq_1" />
+    <axis xyz="1.0 0.0 0.0" />
+    <limit lower="-3.14159" upper="3.14159" effort="10.0" velocity="5.0" />
+  </joint>
+
+  <joint name="Revolute 49" type="revolute">
+    <origin xyz="-0.0025 -0.079874 0.029071" rpy="0 0 0" />
+    <parent link="TibiaHighFrontDer_1" />
+    <child link="PivotTibiaFrontDer_1" />
+    <axis xyz="-1.0 0.0 0.0" />
+    <limit lower="-3.14159" upper="3.14159" effort="10.0" velocity="5.0" />
+  </joint>
+
+  <joint name="Revolute 50" type="revolute">
+    <origin xyz="-0.0055 0.019238 0.00547" rpy="0 0 0" />
+    <parent link="TibiaLowFrontDer_1" />
+    <child link="TibiaHighFrontDer_1" />
+    <axis xyz="-1.0 0.0 0.0" />
+    <limit lower="-3.14159" upper="3.14159" effort="10.0" velocity="5.0" />
+  </joint>
+
+  <joint name="Revolute 51" type="revolute">
+    <origin xyz="-0.0025 0.079874 0.029071" rpy="0 0 0" />
+    <parent link="TibiaHighBackDer_1" />
+    <child link="PivotTibiaBackDer_1" />
+    <axis xyz="-1.0 0.0 0.0" />
+    <limit lower="-3.14159" upper="3.14159" effort="10.0" velocity="5.0" />
+  </joint>
+
+  <joint name="Revolute 52" type="revolute">
+    <origin xyz="-0.0055 -0.019255 0.005407" rpy="0 0 0" />
+    <parent link="TibiaLowBackDer_1" />
+    <child link="TibiaHighBackDer_1" />
+    <axis xyz="-1.0 0.0 0.0" />
+    <limit lower="-3.14159" upper="3.14159" effort="10.0" velocity="5.0" />
+  </joint>
+
+</robot>

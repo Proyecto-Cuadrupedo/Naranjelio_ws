@@ -1,0 +1,1573 @@
+<sdf version='1.11'>
+  <model name='naranjelio'>
+    <link name='base_link'>
+      <inertial>
+        <pose>-0.00073235288739456627 3.5096211676128452e-05 0.086833414337982723 0 0 0</pose>
+        <mass>0.6934169032732499</mass>
+        <inertia>
+          <ixx>0.0091529999999999997</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0015430000000000001</iyy>
+          <iyz>9.9999999999999995e-07</iyz>
+          <izz>0.0097520000000000003</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_link_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>
+              /meshes/base_link.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='base_link_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>
+              /meshes/base_link.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.875 0.875 0.875 1</diffuse>
+          <ambient>0.875 0.875 0.875 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='HipBackDer' type='revolute'>
+      <pose relative_to='base_link'>-0.068594000000000002 0.13270000000000001 0.072321999999999997 0
+        0 0</pose>
+      <parent>base_link</parent>
+      <child>BackDer_1</child>
+      <axis>
+        <xyz>0 -1 0</xyz>
+        <limit>
+          <lower>-3.1415899999999999</lower>
+          <upper>3.1415899999999999</upper>
+          <effort>10</effort>
+          <velocity>5</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='BackDer_1'>
+      <pose relative_to='HipBackDer'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-0.028685619247639741 -0.031166626302325501 -0.0006386163483644014 0 0 0</pose>
+        <mass>0.089858740267303255</mass>
+        <inertia>
+          <ixx>6.3999999999999997e-05</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>6.7999999999999999e-05</iyy>
+          <iyz>0</iyz>
+          <izz>8.5000000000000006e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='BackDer_1_collision'>
+        <pose>0.068594000000000002 -0.13270000000000001 -0.072321999999999997 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>
+              /meshes/BackDer_1.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.20000000000000001</mu>
+              <mu2>0.20000000000000001</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='BackDer_1_visual'>
+        <pose>0.068594000000000002 -0.13270000000000001 -0.072321999999999997 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>
+              /meshes/BackDer_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Silver</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0.875 0.875 0.875 1</diffuse>
+          <ambient>0.875 0.875 0.875 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='FemurBackDer' type='revolute'>
+      <pose relative_to='BackDer_1'>-0.020250000000000001 -0.021661 2.5000000000000001e-05 0 0 0</pose>
+      <parent>BackDer_1</parent>
+      <child>FemurBackDer_1</child>
+      <axis>
+        <xyz>-1 0 0</xyz>
+        <limit>
+          <lower>-3.1415899999999999</lower>
+          <upper>3.1415899999999999</upper>
+          <effort>10</effort>
+          <velocity>5</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='FemurBackDer_1'>
+      <pose relative_to='FemurBackDer'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-0.0063772472874746022 -0.024921411587462469 -0.01217290304801827 0 0 0</pose>
+        <mass>0.0081105240227534042</mass>
+        <inertia>
+          <ixx>7.9999999999999996e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.9999999999999999e-06</iyy>
+          <iyz>-3.0000000000000001e-06</iyz>
+          <izz>6.0000000000000002e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='FemurBackDer_1_collision'>
+        <pose>0.088844000000000006 -0.111039 -0.072346999999999995 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>
+              /meshes/FemurBackDer_1.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.20000000000000001</mu>
+              <mu2>0.20000000000000001</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='FemurBackDer_1_visual'>
+        <pose>0.088844000000000006 -0.111039 -0.072346999999999995 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>
+              /meshes/FemurBackDer_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Silver</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0.875 0.875 0.875 1</diffuse>
+          <ambient>0.875 0.875 0.875 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='FemurTibiaBackDer' type='revolute'>
+      <pose relative_to='FemurBackDer_1'>-0.0088999999999999999 -0.076375999999999999 -0.037307 0 0
+        0</pose>
+      <parent>FemurBackDer_1</parent>
+      <child>TibiaLowBackDer_1</child>
+      <axis>
+        <xyz>-1 0 0</xyz>
+        <limit>
+          <lower>-3.1415899999999999</lower>
+          <upper>3.1415899999999999</upper>
+          <effort>10</effort>
+          <velocity>5</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='TibiaLowBackDer_1'>
+      <pose relative_to='FemurTibiaBackDer'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-0.0027227876049468192 0.05693704112934389 -0.015984987766591179 0 0 0</pose>
+        <mass>0.012662139883285611</mass>
+        <inertia>
+          <ixx>1.7e-05</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.9999999999999999e-06</iyy>
+          <iyz>3.9999999999999998e-06</iyz>
+          <izz>1.5999999999999999e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='TibiaLowBackDer_1_collision'>
+        <pose>0.097743999999999998 -0.034662999999999999 -0.035040000000000002 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>
+              /meshes/TibiaLowBackDer_1.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.20000000000000001</mu>
+              <mu2>0.20000000000000001</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='TibiaLowBackDer_1_visual'>
+        <pose>0.097743999999999998 -0.034662999999999999 -0.035040000000000002 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>
+              /meshes/TibiaLowBackDer_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Silver</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0.875 0.875 0.875 1</diffuse>
+          <ambient>0.875 0.875 0.875 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='Revolute_52' type='revolute'>
+      <pose relative_to='TibiaLowBackDer_1'>-0.0054999999999999997 -0.019255000000000001
+        0.0054070000000000003 0 0 0</pose>
+      <parent>TibiaLowBackDer_1</parent>
+      <child>TibiaHighBackDer_1</child>
+      <axis>
+        <xyz>-1 0 0</xyz>
+        <limit>
+          <lower>-3.1415899999999999</lower>
+          <upper>3.1415899999999999</upper>
+          <effort>10</effort>
+          <velocity>5</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='TibiaHighBackDer_1'>
+      <pose relative_to='Revolute_52'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-0.001476547826182686 0.03802032808698029 0.01383801812466783 0 0 0</pose>
+        <mass>0.0058687334356246953</mass>
+        <inertia>
+          <ixx>3.0000000000000001e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>9.9999999999999995e-07</iyy>
+          <iyz>-9.9999999999999995e-07</iyz>
+          <izz>3.0000000000000001e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='TibiaHighBackDer_1_collision'>
+        <pose>0.103244 -0.015408 -0.040446999999999997 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>
+              /meshes/TibiaHighBackDer_1.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.20000000000000001</mu>
+              <mu2>0.20000000000000001</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='TibiaHighBackDer_1_visual'>
+        <pose>0.103244 -0.015408 -0.040446999999999997 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>
+              /meshes/TibiaHighBackDer_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Silver</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0.875 0.875 0.875 1</diffuse>
+          <ambient>0.875 0.875 0.875 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='Revolute_51' type='revolute'>
+      <pose relative_to='TibiaHighBackDer_1'>-0.0025000000000000001 0.079874000000000001 0.029071 0
+        0 0</pose>
+      <parent>TibiaHighBackDer_1</parent>
+      <child>PivotTibiaBackDer_1</child>
+      <axis>
+        <xyz>-1 0 0</xyz>
+        <limit>
+          <lower>-3.1415899999999999</lower>
+          <upper>3.1415899999999999</upper>
+          <effort>10</effort>
+          <velocity>5</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='PivotTibiaBackDer_1'>
+      <pose relative_to='Revolute_51'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-0.001692763655314025 0.015756854381915181 0.0027788543819850242 0 0 0</pose>
+        <mass>0.00077804272735592956</mass>
+        <inertia>
+          <ixx>1.0e-06</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>1.0e-06</iyy>
+          <iyz>0.0</iyz>
+          <izz>1.0e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='PivotTibiaBackDer_1_collision'>
+        <pose>0.105744 -0.095282000000000006 -0.069517999999999996 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>
+              /meshes/PivotTibiaBackDer_1.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.20000000000000001</mu>
+              <mu2>0.20000000000000001</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='PivotTibiaBackDer_1_visual'>
+        <pose>0.105744 -0.095282000000000006 -0.069517999999999996 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>
+              /meshes/PivotTibiaBackDer_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Silver</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0.875 0.875 0.875 1</diffuse>
+          <ambient>0.875 0.875 0.875 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='HipBackIzq' type='revolute'>
+      <pose relative_to='base_link'>0.067105999999999999 0.13270000000000001 0.072321999999999997 0
+        0 0</pose>
+      <parent>base_link</parent>
+      <child>BackIzq_1</child>
+      <axis>
+        <xyz>0 -1 0</xyz>
+        <limit>
+          <lower>-3.1415899999999999</lower>
+          <upper>3.1415899999999999</upper>
+          <effort>10</effort>
+          <velocity>5</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='BackIzq_1'>
+      <pose relative_to='HipBackIzq'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0.02868501527028124 -0.03125888869900853 -0.00063861634837285297 0 0 0</pose>
+        <mass>0.089858740265124956</mass>
+        <inertia>
+          <ixx>6.3999999999999997e-05</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>6.7999999999999999e-05</iyy>
+          <iyz>0</iyz>
+          <izz>8.5000000000000006e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='BackIzq_1_collision'>
+        <pose>-0.067105999999999999 -0.13270000000000001 -0.072321999999999997 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>
+              /meshes/BackIzq_1.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.20000000000000001</mu>
+              <mu2>0.20000000000000001</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='BackIzq_1_visual'>
+        <pose>-0.067105999999999999 -0.13270000000000001 -0.072321999999999997 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>
+              /meshes/BackIzq_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Silver</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0.875 0.875 0.875 1</diffuse>
+          <ambient>0.875 0.875 0.875 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='FemurBackIzq' type='revolute'>
+      <pose relative_to='BackIzq_1'>0.020250000000000001 -0.021661 -2.5000000000000001e-05 0 0 0</pose>
+      <parent>BackIzq_1</parent>
+      <child>FemurBackIzq_1</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-3.1415899999999999</lower>
+          <upper>3.1415899999999999</upper>
+          <effort>10</effort>
+          <velocity>5</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='FemurBackIzq_1'>
+      <pose relative_to='FemurBackIzq'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0.0063766432477349866 -0.024926951699854639 -0.012161594144430131 0 0 0</pose>
+        <mass>0.0081105239167281948</mass>
+        <inertia>
+          <ixx>7.9999999999999996e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.9999999999999999e-06</iyy>
+          <iyz>-3.0000000000000001e-06</iyz>
+          <izz>6.0000000000000002e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='FemurBackIzq_1_collision'>
+        <pose>-0.087356000000000003 -0.111039 -0.072297 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>
+              /meshes/FemurBackIzq_1.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.20000000000000001</mu>
+              <mu2>0.20000000000000001</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='FemurBackIzq_1_visual'>
+        <pose>-0.087356000000000003 -0.111039 -0.072297 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>
+              /meshes/FemurBackIzq_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Silver</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0.875 0.875 0.875 1</diffuse>
+          <ambient>0.875 0.875 0.875 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='FemurTibiaBackIzq' type='revolute'>
+      <pose relative_to='FemurBackIzq_1'>0.0088999999999999999 -0.076393000000000003
+        -0.037269999999999998 0 0 0</pose>
+      <parent>FemurBackIzq_1</parent>
+      <child>TibiaLowBackIzq_1</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-3.1415899999999999</lower>
+          <upper>3.1415899999999999</upper>
+          <effort>10</effort>
+          <velocity>5</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='TibiaLowBackIzq_1'>
+      <pose relative_to='FemurTibiaBackIzq'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0.002722115468575953 0.057033997146449682 -0.016217300952275499 0 0 0</pose>
+        <mass>0.01270059737038217</mass>
+        <inertia>
+          <ixx>1.7e-05</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.9999999999999999e-06</iyy>
+          <iyz>3.9999999999999998e-06</iyz>
+          <izz>1.5999999999999999e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='TibiaLowBackIzq_1_collision'>
+        <pose>-0.096255999999999994 -0.034646000000000003 -0.035027000000000003 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>
+              /meshes/TibiaLowBackIzq_1.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.20000000000000001</mu>
+              <mu2>0.20000000000000001</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='TibiaLowBackIzq_1_visual'>
+        <pose>-0.096255999999999994 -0.034646000000000003 -0.035027000000000003 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>
+              /meshes/TibiaLowBackIzq_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Silver</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0.875 0.875 0.875 1</diffuse>
+          <ambient>0.875 0.875 0.875 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='Revolute_48' type='revolute'>
+      <pose relative_to='TibiaLowBackIzq_1'>0.0054999999999999997 -0.019238000000000002 0.00547 0 0
+        0</pose>
+      <parent>TibiaLowBackIzq_1</parent>
+      <child>TIbiaHighBackIzq_1</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-3.1415899999999999</lower>
+          <upper>3.1415899999999999</upper>
+          <effort>10</effort>
+          <velocity>5</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='TIbiaHighBackIzq_1'>
+      <pose relative_to='Revolute_48'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0.001475943775834251 0.038020328086979728 0.01383801812466756 0 0 0</pose>
+        <mass>0.0058687334356246953</mass>
+        <inertia>
+          <ixx>3.0000000000000001e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>9.9999999999999995e-07</iyy>
+          <iyz>-9.9999999999999995e-07</iyz>
+          <izz>3.0000000000000001e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='TIbiaHighBackIzq_1_collision'>
+        <pose>-0.101756 -0.015408 -0.040496999999999998 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>
+              /meshes/TIbiaHighBackIzq_1.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.20000000000000001</mu>
+              <mu2>0.20000000000000001</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='TIbiaHighBackIzq_1_visual'>
+        <pose>-0.101756 -0.015408 -0.040496999999999998 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>
+              /meshes/TIbiaHighBackIzq_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Silver</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0.875 0.875 0.875 1</diffuse>
+          <ambient>0.875 0.875 0.875 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='Revolute_47' type='revolute'>
+      <pose relative_to='TIbiaHighBackIzq_1'>0.0025000000000000001 0.079874000000000001 0.029071 0 0
+        0</pose>
+      <parent>TIbiaHighBackIzq_1</parent>
+      <child>PivotTibiaBackIzq_1</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-3.1415899999999999</lower>
+          <upper>3.1415899999999999</upper>
+          <effort>10</effort>
+          <velocity>5</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='PivotTibiaBackIzq_1'>
+      <pose relative_to='Revolute_47'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0.00169215960496609 0.015707613994263792 0.0027701719731016978 0 0 0</pose>
+        <mass>0.00077804272735592956</mass>
+        <inertia>
+          <ixx>1.0e-06</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>1.0e-06</iyy>
+          <iyz>0.0</iyz>
+          <izz>1.0e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='PivotTibiaBackIzq_1_collision'>
+        <pose>-0.104256 -0.095282000000000006 -0.069568000000000005 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>
+              /meshes/PivotTibiaBackIzq_1.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.20000000000000001</mu>
+              <mu2>0.20000000000000001</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='PivotTibiaBackIzq_1_visual'>
+        <pose>-0.104256 -0.095282000000000006 -0.069568000000000005 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>
+              /meshes/PivotTibiaBackIzq_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Silver</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0.875 0.875 0.875 1</diffuse>
+          <ambient>0.875 0.875 0.875 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='HipFrontDer' type='revolute'>
+      <pose relative_to='base_link'>-0.068594000000000002 -0.13270000000000001 0.072321999999999997
+        0 0 0</pose>
+      <parent>base_link</parent>
+      <child>FrontDer_1</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-3.1415899999999999</lower>
+          <upper>3.1415899999999999</upper>
+          <effort>10</effort>
+          <velocity>5</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='FrontDer_1'>
+      <pose relative_to='HipFrontDer'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-0.02868561924757165 0.031258888699007843 -0.00063861634837283909 0 0 0</pose>
+        <mass>0.089858740265127912</mass>
+        <inertia>
+          <ixx>6.3999999999999997e-05</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>6.7999999999999999e-05</iyy>
+          <iyz>0</iyz>
+          <izz>8.5000000000000006e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='FrontDer_1_collision'>
+        <pose>0.068594000000000002 0.13270000000000001 -0.072321999999999997 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>
+              /meshes/FrontDer_1.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.20000000000000001</mu>
+              <mu2>0.20000000000000001</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='FrontDer_1_visual'>
+        <pose>0.068594000000000002 0.13270000000000001 -0.072321999999999997 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>
+              /meshes/FrontDer_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Silver</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0.875 0.875 0.875 1</diffuse>
+          <ambient>0.875 0.875 0.875 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='FemurFrontDer' type='revolute'>
+      <pose relative_to='FrontDer_1'>-0.020250000000000001 0.021661 -2.5000000000000001e-05 0 0 0</pose>
+      <parent>FrontDer_1</parent>
+      <child>FemurFrontDer_1</child>
+      <axis>
+        <xyz>-1 0 0</xyz>
+        <limit>
+          <lower>-3.1415899999999999</lower>
+          <upper>3.1415899999999999</upper>
+          <effort>10</effort>
+          <velocity>5</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='FemurFrontDer_1'>
+      <pose relative_to='FemurFrontDer'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-0.0063772472869298297 0.024926951699869301 -0.012161594144447639 0 0 0</pose>
+        <mass>0.0081105239167268556</mass>
+        <inertia>
+          <ixx>7.9999999999999996e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.9999999999999999e-06</iyy>
+          <iyz>3.0000000000000001e-06</iyz>
+          <izz>6.0000000000000002e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='FemurFrontDer_1_collision'>
+        <pose>0.088844000000000006 0.111039 -0.072297 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>
+              /meshes/FemurFrontDer_1.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.20000000000000001</mu>
+              <mu2>0.20000000000000001</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='FemurFrontDer_1_visual'>
+        <pose>0.088844000000000006 0.111039 -0.072297 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>
+              /meshes/FemurFrontDer_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Silver</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0.875 0.875 0.875 1</diffuse>
+          <ambient>0.875 0.875 0.875 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='FemurTibiaFrontDer' type='revolute'>
+      <pose relative_to='FemurFrontDer_1'>-0.0088999999999999999 0.076393000000000003
+        -0.037269999999999998 0 0 0</pose>
+      <parent>FemurFrontDer_1</parent>
+      <child>TibiaLowFrontDer_1</child>
+      <axis>
+        <xyz>-1 0 0</xyz>
+        <limit>
+          <lower>-3.1415899999999999</lower>
+          <upper>3.1415899999999999</upper>
+          <effort>10</effort>
+          <velocity>5</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='TibiaLowFrontDer_1'>
+      <pose relative_to='FemurTibiaFrontDer'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-0.0027227195189232362 -0.05703399714645422 -0.016217300952278611 0 0 0</pose>
+        <mass>0.01270059737037935</mass>
+        <inertia>
+          <ixx>1.7e-05</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.9999999999999999e-06</iyy>
+          <iyz>-3.9999999999999998e-06</iyz>
+          <izz>1.5999999999999999e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='TibiaLowFrontDer_1_collision'>
+        <pose>0.097743999999999998 0.034646000000000003 -0.035027000000000003 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>
+              /meshes/TibiaLowFrontDer_1.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.20000000000000001</mu>
+              <mu2>0.20000000000000001</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='TibiaLowFrontDer_1_visual'>
+        <pose>0.097743999999999998 0.034646000000000003 -0.035027000000000003 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>
+              /meshes/TibiaLowFrontDer_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Silver</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0.875 0.875 0.875 1</diffuse>
+          <ambient>0.875 0.875 0.875 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='Revolute_50' type='revolute'>
+      <pose relative_to='TibiaLowFrontDer_1'>-0.0054999999999999997 0.019238000000000002 0.00547 0 0
+        0</pose>
+      <parent>TibiaLowFrontDer_1</parent>
+      <child>TibiaHighFrontDer_1</child>
+      <axis>
+        <xyz>-1 0 0</xyz>
+        <limit>
+          <lower>-3.1415899999999999</lower>
+          <upper>3.1415899999999999</upper>
+          <effort>10</effort>
+          <velocity>5</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='TibiaHighFrontDer_1'>
+      <pose relative_to='Revolute_50'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-0.0014765478261815619 -0.038020328086980477 0.013838018124667671 0 0 0</pose>
+        <mass>0.0058687334356246953</mass>
+        <inertia>
+          <ixx>3.0000000000000001e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>9.9999999999999995e-07</iyy>
+          <iyz>9.9999999999999995e-07</iyz>
+          <izz>3.0000000000000001e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='TibiaHighFrontDer_1_collision'>
+        <pose>0.103244 0.015408 -0.040496999999999998 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>
+              /meshes/TibiaHighFrontDer_1.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.20000000000000001</mu>
+              <mu2>0.20000000000000001</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='TibiaHighFrontDer_1_visual'>
+        <pose>0.103244 0.015408 -0.040496999999999998 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>
+              /meshes/TibiaHighFrontDer_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Silver</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0.875 0.875 0.875 1</diffuse>
+          <ambient>0.875 0.875 0.875 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='Revolute_49' type='revolute'>
+      <pose relative_to='TibiaHighFrontDer_1'>-0.0025000000000000001 -0.079874000000000001 0.029071
+        0 0 0</pose>
+      <parent>TibiaHighFrontDer_1</parent>
+      <child>PivotTibiaFrontDer_1</child>
+      <axis>
+        <xyz>-1 0 0</xyz>
+        <limit>
+          <lower>-3.1415899999999999</lower>
+          <upper>3.1415899999999999</upper>
+          <effort>10</effort>
+          <velocity>5</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='PivotTibiaFrontDer_1'>
+      <pose relative_to='Revolute_49'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-0.001692763655313276 -0.015707613994264649 0.0027701719731016432 0 0 0</pose>
+        <mass>0.00077804272735592956</mass>
+        <inertia>
+          <ixx>1.0e-06</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>1.0e-06</iyy>
+          <iyz>0.0</iyz>
+          <izz>1.0e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='PivotTibiaFrontDer_1_collision'>
+        <pose>0.105744 0.095282000000000006 -0.069568000000000005 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>
+              /meshes/PivotTibiaFrontDer_1.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.20000000000000001</mu>
+              <mu2>0.20000000000000001</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='PivotTibiaFrontDer_1_visual'>
+        <pose>0.105744 0.095282000000000006 -0.069568000000000005 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>
+              /meshes/PivotTibiaFrontDer_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Silver</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0.875 0.875 0.875 1</diffuse>
+          <ambient>0.875 0.875 0.875 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='HipFrontIzq' type='revolute'>
+      <pose relative_to='base_link'>0.067105999999999999 -0.13270000000000001 0.072321999999999997 0
+        0 0</pose>
+      <parent>base_link</parent>
+      <child>FrontIzq_1</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-3.1415899999999999</lower>
+          <upper>3.1415899999999999</upper>
+          <effort>10</effort>
+          <velocity>5</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='FrontIzq_1'>
+      <pose relative_to='HipFrontIzq'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0.0286850152703528 0.03116662630232471 -0.00063861634836306913 0 0 0</pose>
+        <mass>0.089858740267301784</mass>
+        <inertia>
+          <ixx>6.3999999999999997e-05</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>6.7999999999999999e-05</iyy>
+          <iyz>0</iyz>
+          <izz>8.5000000000000006e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='FrontIzq_1_collision'>
+        <pose>-0.067105999999999999 0.13270000000000001 -0.072321999999999997 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>
+              /meshes/FrontIzq_1.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.20000000000000001</mu>
+              <mu2>0.20000000000000001</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='FrontIzq_1_visual'>
+        <pose>-0.067105999999999999 0.13270000000000001 -0.072321999999999997 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>
+              /meshes/FrontIzq_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Silver</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0.875 0.875 0.875 1</diffuse>
+          <ambient>0.875 0.875 0.875 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='FemurFrontIzq' type='revolute'>
+      <pose relative_to='FrontIzq_1'>0.020250000000000001 0.021661 2.5000000000000001e-05 0 0 0</pose>
+      <parent>FrontIzq_1</parent>
+      <child>FemurFrontIzq_1</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-3.1415899999999999</lower>
+          <upper>3.1415899999999999</upper>
+          <effort>10</effort>
+          <velocity>5</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='FemurFrontIzq_1'>
+      <pose relative_to='FemurFrontIzq'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0.0063766432477946611 0.024921411587435119 -0.01217290304801478 0 0 0</pose>
+        <mass>0.0081105240227538015</mass>
+        <inertia>
+          <ixx>7.9999999999999996e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.9999999999999999e-06</iyy>
+          <iyz>3.0000000000000001e-06</iyz>
+          <izz>6.0000000000000002e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='FemurFrontIzq_1_collision'>
+        <pose>-0.087356000000000003 0.111039 -0.072346999999999995 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>
+              /meshes/FemurFrontIzq_1.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.20000000000000001</mu>
+              <mu2>0.20000000000000001</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='FemurFrontIzq_1_visual'>
+        <pose>-0.087356000000000003 0.111039 -0.072346999999999995 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>
+              /meshes/FemurFrontIzq_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Silver</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0.875 0.875 0.875 1</diffuse>
+          <ambient>0.875 0.875 0.875 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='FemurTibiaFrontIzq' type='revolute'>
+      <pose relative_to='FemurFrontIzq_1'>0.0088999999999999999 0.076375999999999999 -0.037307 0 0 0</pose>
+      <parent>FemurFrontIzq_1</parent>
+      <child>TibiaLowFrontIzq_1</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-3.1415899999999999</lower>
+          <upper>3.1415899999999999</upper>
+          <effort>10</effort>
+          <velocity>5</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='TibiaLowFrontIzq_1'>
+      <pose relative_to='FemurTibiaFrontIzq'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0.0027221835545991201 -0.056937041129338707 -0.0159849877665902 0 0 0</pose>
+        <mass>0.01266213988328845</mass>
+        <inertia>
+          <ixx>1.7e-05</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1.9999999999999999e-06</iyy>
+          <iyz>-3.9999999999999998e-06</iyz>
+          <izz>1.5999999999999999e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='TibiaLowFrontIzq_1_collision'>
+        <pose>-0.096255999999999994 0.034662999999999999 -0.035040000000000002 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>
+              /meshes/TibiaLowFrontIzq_1.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.20000000000000001</mu>
+              <mu2>0.20000000000000001</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='TibiaLowFrontIzq_1_visual'>
+        <pose>-0.096255999999999994 0.034662999999999999 -0.035040000000000002 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>
+              /meshes/TibiaLowFrontIzq_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Silver</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0.875 0.875 0.875 1</diffuse>
+          <ambient>0.875 0.875 0.875 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='Revolute_45' type='revolute'>
+      <pose relative_to='TibiaLowFrontIzq_1'>0.0054999999999999997 0.019255000000000001
+        0.0054070000000000003 0 0 0</pose>
+      <parent>TibiaLowFrontIzq_1</parent>
+      <child>TibiaHighFrontIzq_1</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-3.1415899999999999</lower>
+          <upper>3.1415899999999999</upper>
+          <effort>10</effort>
+          <velocity>5</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='TibiaHighFrontIzq_1'>
+      <pose relative_to='Revolute_45'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0.0014759437758350149 -0.038020328086980089 0.013838018124668601 0 0 0</pose>
+        <mass>0.0058687334356246953</mass>
+        <inertia>
+          <ixx>3.0000000000000001e-06</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>9.9999999999999995e-07</iyy>
+          <iyz>9.9999999999999995e-07</iyz>
+          <izz>3.0000000000000001e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='TibiaHighFrontIzq_1_collision'>
+        <pose>-0.101756 0.015408 -0.040446999999999997 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>
+              /meshes/TibiaHighFrontIzq_1.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.20000000000000001</mu>
+              <mu2>0.20000000000000001</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='TibiaHighFrontIzq_1_visual'>
+        <pose>-0.101756 0.015408 -0.040446999999999997 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>
+              /meshes/TibiaHighFrontIzq_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Silver</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0.875 0.875 0.875 1</diffuse>
+          <ambient>0.875 0.875 0.875 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <joint name='Revolute_46' type='revolute'>
+      <pose relative_to='TibiaHighFrontIzq_1'>0.0025000000000000001 -0.079874000000000001 0.029071 0
+        0 0</pose>
+      <parent>TibiaHighFrontIzq_1</parent>
+      <child>PivotTibiaFrontIzq_1</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-3.1415899999999999</lower>
+          <upper>3.1415899999999999</upper>
+          <effort>10</effort>
+          <velocity>5</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='PivotTibiaFrontIzq_1'>
+      <pose relative_to='Revolute_46'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0.0016921596049667279 -0.015756854381915101 0.0027788543819848438 0 0 0</pose>
+        <mass>0.00077804272735592956</mass>
+        <inertia>
+          <ixx>1.0e-06</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>1.0e-06</iyy>
+          <iyz>0.0</iyz>
+          <izz>1.0e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='PivotTibiaFrontIzq_1_collision'>
+        <pose>-0.104256 0.095282000000000006 -0.069517999999999996 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>
+              /meshes/PivotTibiaFrontIzq_1.stl</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode />
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.20000000000000001</mu>
+              <mu2>0.20000000000000001</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='PivotTibiaFrontIzq_1_visual'>
+        <pose>-0.104256 0.095282000000000006 -0.069517999999999996 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>
+              /meshes/PivotTibiaFrontIzq_1.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Silver</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+          <diffuse>0.875 0.875 0.875 1</diffuse>
+          <ambient>0.875 0.875 0.875 1</ambient>
+        </material>
+      </visual>
+    </link>
+    <plugin filename="gz-sim-joint-position-controller-system"
+      name="gz::sim::systems::JointPositionController">
+      <joint_name>HipFrontDer</joint_name>
+      <p_gain>50</p_gain>
+      <i_gain>0.5</i_gain>
+      <d_gain>5.0</d_gain>
+      <i_max>1</i_max>
+      <i_min>-1</i_min>
+      <cmd_max>1000</cmd_max>
+      <cmd_min>-1000</cmd_min>
+    </plugin>
+
+    <plugin filename="gz-sim-joint-position-controller-system"
+      name="gz::sim::systems::JointPositionController">
+      <joint_name>FemurFrontDer</joint_name>
+      <p_gain>50</p_gain>
+      <i_gain>0.5</i_gain>
+      <d_gain>5.0</d_gain>
+      <i_max>1</i_max>
+      <i_min>-1</i_min>
+      <cmd_max>1000</cmd_max>
+      <cmd_min>-1000</cmd_min>
+    </plugin>
+
+    <plugin filename="gz-sim-joint-state-publisher-system"
+      name="gz::sim::systems::JointStatePublisher">
+      <topic>joint_states</topic>
+    </plugin>
+
+    <plugin filename="gz-sim-joint-position-controller-system"
+      name="gz::sim::systems::JointPositionController">
+      <joint_name>FemurTibiaFrontDer</joint_name>
+      <p_gain>50</p_gain>
+      <i_gain>0.5</i_gain>
+      <d_gain>5.0</d_gain>
+      <i_max>1</i_max>
+      <i_min>-1</i_min>
+      <cmd_max>1000</cmd_max>
+      <cmd_min>-1000</cmd_min>
+    </plugin>
+
+    <plugin filename="gz-sim-joint-position-controller-system"
+      name="gz::sim::systems::JointPositionController">
+      <joint_name>HipFrontIzq</joint_name>
+      <p_gain>50</p_gain>
+      <i_gain>0.5</i_gain>
+      <d_gain>5.0</d_gain>
+      <i_max>1</i_max>
+      <i_min>-1</i_min>
+      <cmd_max>1000</cmd_max>
+      <cmd_min>-1000</cmd_min>
+    </plugin>
+
+    <plugin filename="gz-sim-joint-position-controller-system"
+      name="gz::sim::systems::JointPositionController">
+      <joint_name>FemurFrontIzq</joint_name>
+      <p_gain>50</p_gain>
+      <i_gain>0.5</i_gain>
+      <d_gain>5.0</d_gain>
+      <i_max>1</i_max>
+      <i_min>-1</i_min>
+      <cmd_max>1000</cmd_max>
+      <cmd_min>-1000</cmd_min>
+    </plugin>
+
+    <plugin filename="gz-sim-joint-position-controller-system"
+      name="gz::sim::systems::JointPositionController">
+      <joint_name>FemurTibiaFrontIzq</joint_name>
+      <p_gain>50</p_gain>
+      <i_gain>0.5</i_gain>
+      <d_gain>5.0</d_gain>
+      <i_max>1</i_max>
+      <i_min>-1</i_min>
+      <cmd_max>1000</cmd_max>
+      <cmd_min>-1000</cmd_min>
+    </plugin>
+  </model>
+</sdf>

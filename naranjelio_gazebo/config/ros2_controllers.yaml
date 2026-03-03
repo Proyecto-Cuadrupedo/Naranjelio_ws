@@ -1,0 +1,31 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100  # Hz
+
+    # Publishes joint states to the /joint_states topic (so RViz works!)
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    # Controls the actual movement of your joints
+    joint_trajectory_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+joint_trajectory_controller:
+  ros__parameters:
+    # List all the joints you want to move here
+    joints:
+      - HipFrontIzq
+      - HipFrontDer
+      - HipBackIzq
+      - HipBackDer
+      - FemurFrontIzq
+      - FemurBackIzq
+      - FemurFrontDer
+      - FemurBackDer
+      # Add the rest of your continuous/revolute joints here...
+      
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
