@@ -1,0 +1,1 @@
+En este e encontraran los nodos para el movimiento, dentro de comms, el archivo de base_movements se encarga del movimiento y el imu_ploter de la coneccion y registro de la información del IMU

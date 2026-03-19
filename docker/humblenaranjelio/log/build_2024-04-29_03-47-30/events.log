@@ -1,0 +1,54 @@
+[0.000000] (-) TimerEvent: {}
+[0.000482] (commsonboard) JobQueued: {'identifier': 'commsonboard', 'dependencies': OrderedDict()}
+[0.000942] (commsonboard) JobStarted: {'identifier': 'commsonboard'}
+[0.099615] (-) TimerEvent: {}
+[0.199971] (-) TimerEvent: {}
+[0.300453] (-) TimerEvent: {}
+[0.401116] (-) TimerEvent: {}
+[0.501539] (-) TimerEvent: {}
+[0.601901] (-) TimerEvent: {}
+[0.702266] (-) TimerEvent: {}
+[0.802679] (-) TimerEvent: {}
+[0.825332] (commsonboard) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/commsonboard', 'build', '--build-base', '/naranjelio/build/commsonboard/build', 'install', '--record', '/naranjelio/build/commsonboard/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/naranjelio/src/commsonboard', 'env': {'HOSTNAME': 'naranjelio', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/ros', 'OLDPWD': '/', 'ROS_PYTHON_VERSION': '3', 'ROS_DISTRO': 'humble', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'LANG': 'C.UTF-8', 'ROS_DOMAIN_ID': '1', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'PWD': '/naranjelio/build/commsonboard', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/naranjelio/build/commsonboard/prefix_override:/naranjelio/install/commsonboard/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[0.902770] (-) TimerEvent: {}
+[1.003131] (-) TimerEvent: {}
+[1.074031] (commsonboard) StdoutLine: {'line': b'running egg_info\n'}
+[1.074879] (commsonboard) StdoutLine: {'line': b'creating ../../build/commsonboard/commsonboard.egg-info\n'}
+[1.075179] (commsonboard) StdoutLine: {'line': b'writing ../../build/commsonboard/commsonboard.egg-info/PKG-INFO\n'}
+[1.075601] (commsonboard) StdoutLine: {'line': b'writing dependency_links to ../../build/commsonboard/commsonboard.egg-info/dependency_links.txt\n'}
+[1.075811] (commsonboard) StdoutLine: {'line': b'writing entry points to ../../build/commsonboard/commsonboard.egg-info/entry_points.txt\n'}
+[1.075967] (commsonboard) StdoutLine: {'line': b'writing requirements to ../../build/commsonboard/commsonboard.egg-info/requires.txt\n'}
+[1.076071] (commsonboard) StdoutLine: {'line': b'writing top-level names to ../../build/commsonboard/commsonboard.egg-info/top_level.txt\n'}
+[1.076290] (commsonboard) StdoutLine: {'line': b"writing manifest file '../../build/commsonboard/commsonboard.egg-info/SOURCES.txt'\n"}
+[1.078570] (commsonboard) StdoutLine: {'line': b"reading manifest file '../../build/commsonboard/commsonboard.egg-info/SOURCES.txt'\n"}
+[1.079398] (commsonboard) StdoutLine: {'line': b"writing manifest file '../../build/commsonboard/commsonboard.egg-info/SOURCES.txt'\n"}
+[1.079576] (commsonboard) StdoutLine: {'line': b'running build\n'}
+[1.079707] (commsonboard) StdoutLine: {'line': b'running build_py\n'}
+[1.079854] (commsonboard) StdoutLine: {'line': b'creating /naranjelio/build/commsonboard/build\n'}
+[1.080000] (commsonboard) StdoutLine: {'line': b'creating /naranjelio/build/commsonboard/build/lib\n'}
+[1.080157] (commsonboard) StdoutLine: {'line': b'creating /naranjelio/build/commsonboard/build/lib/commsonboard\n'}
+[1.080245] (commsonboard) StdoutLine: {'line': b'copying commsonboard/__init__.py -> /naranjelio/build/commsonboard/build/lib/commsonboard\n'}
+[1.080342] (commsonboard) StdoutLine: {'line': b'copying commsonboard/angle_reader.py -> /naranjelio/build/commsonboard/build/lib/commsonboard\n'}
+[1.080498] (commsonboard) StdoutLine: {'line': b'running install\n'}
+[1.080918] (commsonboard) StdoutLine: {'line': b'running install_lib\n'}
+[1.081908] (commsonboard) StdoutLine: {'line': b'creating /naranjelio/install/commsonboard/lib/python3.10/site-packages/commsonboard\n'}
+[1.082023] (commsonboard) StdoutLine: {'line': b'copying /naranjelio/build/commsonboard/build/lib/commsonboard/__init__.py -> /naranjelio/install/commsonboard/lib/python3.10/site-packages/commsonboard\n'}
+[1.082156] (commsonboard) StdoutLine: {'line': b'copying /naranjelio/build/commsonboard/build/lib/commsonboard/angle_reader.py -> /naranjelio/install/commsonboard/lib/python3.10/site-packages/commsonboard\n'}
+[1.083124] (commsonboard) StdoutLine: {'line': b'byte-compiling /naranjelio/install/commsonboard/lib/python3.10/site-packages/commsonboard/__init__.py to __init__.cpython-310.pyc\n'}
+[1.083439] (commsonboard) StdoutLine: {'line': b'byte-compiling /naranjelio/install/commsonboard/lib/python3.10/site-packages/commsonboard/angle_reader.py to angle_reader.cpython-310.pyc\n'}
+[1.084351] (commsonboard) StdoutLine: {'line': b'running install_data\n'}
+[1.084465] (commsonboard) StdoutLine: {'line': b'creating /naranjelio/install/commsonboard/share/ament_index\n'}
+[1.084551] (commsonboard) StdoutLine: {'line': b'creating /naranjelio/install/commsonboard/share/ament_index/resource_index\n'}
+[1.084650] (commsonboard) StdoutLine: {'line': b'creating /naranjelio/install/commsonboard/share/ament_index/resource_index/packages\n'}
+[1.084738] (commsonboard) StdoutLine: {'line': b'copying resource/commsonboard -> /naranjelio/install/commsonboard/share/ament_index/resource_index/packages\n'}
+[1.084831] (commsonboard) StdoutLine: {'line': b'copying package.xml -> /naranjelio/install/commsonboard/share/commsonboard\n'}
+[1.084925] (commsonboard) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.087366] (commsonboard) StdoutLine: {'line': b'Copying ../../build/commsonboard/commsonboard.egg-info to /naranjelio/install/commsonboard/lib/python3.10/site-packages/commsonboard-0.0.0-py3.10.egg-info\n'}
+[1.088562] (commsonboard) StdoutLine: {'line': b'running install_scripts\n'}
+[1.103201] (-) TimerEvent: {}
+[1.119060] (commsonboard) StdoutLine: {'line': b'Installing angle_reader script to /naranjelio/install/commsonboard/lib/commsonboard\n'}
+[1.119600] (commsonboard) StdoutLine: {'line': b"writing list of installed files to '/naranjelio/build/commsonboard/install.log'\n"}
+[1.181476] (commsonboard) CommandEnded: {'returncode': 0}
+[1.203322] (-) TimerEvent: {}
+[1.207644] (commsonboard) JobEnded: {'identifier': 'commsonboard', 'rc': 0}
+[1.208722] (-) EventReactorShutdown: {}

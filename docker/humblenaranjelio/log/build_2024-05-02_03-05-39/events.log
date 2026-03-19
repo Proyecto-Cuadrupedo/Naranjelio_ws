@@ -1,0 +1,37 @@
+[0.000000] (-) TimerEvent: {}
+[0.000485] (commsonboard) JobQueued: {'identifier': 'commsonboard', 'dependencies': OrderedDict()}
+[0.000903] (commsonboard) JobStarted: {'identifier': 'commsonboard'}
+[0.099677] (-) TimerEvent: {}
+[0.200076] (-) TimerEvent: {}
+[0.300618] (-) TimerEvent: {}
+[0.401203] (-) TimerEvent: {}
+[0.501601] (-) TimerEvent: {}
+[0.601981] (-) TimerEvent: {}
+[0.702407] (-) TimerEvent: {}
+[0.732274] (commsonboard) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/commsonboard', 'build', '--build-base', '/naranjelio/build/commsonboard/build', 'install', '--record', '/naranjelio/build/commsonboard/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/naranjelio/src/commsonboard', 'env': {'HOSTNAME': 'naranjelio', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/ros', 'OLDPWD': '/', 'ROS_PYTHON_VERSION': '3', 'ROS_DISTRO': 'humble', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'LANG': 'C.UTF-8', 'ROS_DOMAIN_ID': '1', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'PWD': '/naranjelio/build/commsonboard', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/naranjelio/build/commsonboard/prefix_override:/naranjelio/install/commsonboard/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[0.802524] (-) TimerEvent: {}
+[0.902979] (-) TimerEvent: {}
+[0.992454] (commsonboard) StdoutLine: {'line': b'running egg_info\n'}
+[0.993500] (commsonboard) StdoutLine: {'line': b'writing ../../build/commsonboard/commsonboard.egg-info/PKG-INFO\n'}
+[0.993911] (commsonboard) StdoutLine: {'line': b'writing dependency_links to ../../build/commsonboard/commsonboard.egg-info/dependency_links.txt\n'}
+[0.994141] (commsonboard) StdoutLine: {'line': b'writing entry points to ../../build/commsonboard/commsonboard.egg-info/entry_points.txt\n'}
+[0.994343] (commsonboard) StdoutLine: {'line': b'writing requirements to ../../build/commsonboard/commsonboard.egg-info/requires.txt\n'}
+[0.994487] (commsonboard) StdoutLine: {'line': b'writing top-level names to ../../build/commsonboard/commsonboard.egg-info/top_level.txt\n'}
+[0.997109] (commsonboard) StdoutLine: {'line': b"reading manifest file '../../build/commsonboard/commsonboard.egg-info/SOURCES.txt'\n"}
+[0.998143] (commsonboard) StdoutLine: {'line': b"writing manifest file '../../build/commsonboard/commsonboard.egg-info/SOURCES.txt'\n"}
+[0.998322] (commsonboard) StdoutLine: {'line': b'running build\n'}
+[0.998447] (commsonboard) StdoutLine: {'line': b'running build_py\n'}
+[0.998753] (commsonboard) StdoutLine: {'line': b'running install\n'}
+[0.999181] (commsonboard) StdoutLine: {'line': b'running install_lib\n'}
+[1.001056] (commsonboard) StdoutLine: {'line': b'running install_data\n'}
+[1.001193] (commsonboard) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.003029] (-) TimerEvent: {}
+[1.003605] (commsonboard) StdoutLine: {'line': b"removing '/naranjelio/install/commsonboard/lib/python3.10/site-packages/commsonboard-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[1.004146] (commsonboard) StdoutLine: {'line': b'Copying ../../build/commsonboard/commsonboard.egg-info to /naranjelio/install/commsonboard/lib/python3.10/site-packages/commsonboard-0.0.0-py3.10.egg-info\n'}
+[1.005585] (commsonboard) StdoutLine: {'line': b'running install_scripts\n'}
+[1.037719] (commsonboard) StdoutLine: {'line': b'Installing angle_reader script to /naranjelio/install/commsonboard/lib/commsonboard\n'}
+[1.038383] (commsonboard) StdoutLine: {'line': b"writing list of installed files to '/naranjelio/build/commsonboard/install.log'\n"}
+[1.101187] (commsonboard) CommandEnded: {'returncode': 0}
+[1.103143] (-) TimerEvent: {}
+[1.116506] (commsonboard) JobEnded: {'identifier': 'commsonboard', 'rc': 0}
+[1.117656] (-) EventReactorShutdown: {}

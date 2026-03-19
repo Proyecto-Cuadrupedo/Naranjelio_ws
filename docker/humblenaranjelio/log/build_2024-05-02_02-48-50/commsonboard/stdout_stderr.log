@@ -1,0 +1,23 @@
+running egg_info
+writing ../../build/commsonboard/commsonboard.egg-info/PKG-INFO
+writing dependency_links to ../../build/commsonboard/commsonboard.egg-info/dependency_links.txt
+writing entry points to ../../build/commsonboard/commsonboard.egg-info/entry_points.txt
+writing requirements to ../../build/commsonboard/commsonboard.egg-info/requires.txt
+writing top-level names to ../../build/commsonboard/commsonboard.egg-info/top_level.txt
+reading manifest file '../../build/commsonboard/commsonboard.egg-info/SOURCES.txt'
+writing manifest file '../../build/commsonboard/commsonboard.egg-info/SOURCES.txt'
+running build
+running build_py
+copying commsonboard/angle_reader.py -> /naranjelio/build/commsonboard/build/lib/commsonboard
+running install
+running install_lib
+copying /naranjelio/build/commsonboard/build/lib/commsonboard/angle_reader.py -> /naranjelio/install/commsonboard/lib/python3.10/site-packages/commsonboard
+byte-compiling /naranjelio/install/commsonboard/lib/python3.10/site-packages/commsonboard/angle_reader.py to angle_reader.cpython-310.pyc
+running install_data
+copying package.xml -> /naranjelio/install/commsonboard/share/commsonboard
+running install_egg_info
+removing '/naranjelio/install/commsonboard/lib/python3.10/site-packages/commsonboard-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/commsonboard/commsonboard.egg-info to /naranjelio/install/commsonboard/lib/python3.10/site-packages/commsonboard-0.0.0-py3.10.egg-info
+running install_scripts
+Installing angle_reader script to /naranjelio/install/commsonboard/lib/commsonboard
+writing list of installed files to '/naranjelio/build/commsonboard/install.log'

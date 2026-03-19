@@ -1,0 +1,16 @@
+package.xml
+setup.cfg
+setup.py
+../../build/commsonboard/commsonboard.egg-info/PKG-INFO
+../../build/commsonboard/commsonboard.egg-info/SOURCES.txt
+../../build/commsonboard/commsonboard.egg-info/dependency_links.txt
+../../build/commsonboard/commsonboard.egg-info/entry_points.txt
+../../build/commsonboard/commsonboard.egg-info/requires.txt
+../../build/commsonboard/commsonboard.egg-info/top_level.txt
+../../build/commsonboard/commsonboard.egg-info/zip-safe
+commsonboard/__init__.py
+commsonboard/angle_reader.py
+resource/commsonboard
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

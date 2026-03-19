@@ -1,0 +1,3 @@
+[console_scripts]
+angle_reader = commsonboard.angle_reader:main
+

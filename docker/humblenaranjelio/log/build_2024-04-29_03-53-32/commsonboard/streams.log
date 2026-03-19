@@ -1,0 +1,21 @@
+[0.727s] Invoking command in '/naranjelio/src/commsonboard': PYTHONPATH=/naranjelio/build/commsonboard/prefix_override:/naranjelio/install/commsonboard/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/commsonboard build --build-base /naranjelio/build/commsonboard/build install --record /naranjelio/build/commsonboard/install.log --single-version-externally-managed install_data
+[0.974s] running egg_info
+[0.975s] writing ../../build/commsonboard/commsonboard.egg-info/PKG-INFO
+[0.977s] writing dependency_links to ../../build/commsonboard/commsonboard.egg-info/dependency_links.txt
+[0.977s] writing entry points to ../../build/commsonboard/commsonboard.egg-info/entry_points.txt
+[0.977s] writing requirements to ../../build/commsonboard/commsonboard.egg-info/requires.txt
+[0.977s] writing top-level names to ../../build/commsonboard/commsonboard.egg-info/top_level.txt
+[0.980s] reading manifest file '../../build/commsonboard/commsonboard.egg-info/SOURCES.txt'
+[0.981s] writing manifest file '../../build/commsonboard/commsonboard.egg-info/SOURCES.txt'
+[0.981s] running build
+[0.981s] running build_py
+[0.981s] running install
+[0.982s] running install_lib
+[0.984s] running install_data
+[0.984s] running install_egg_info
+[0.986s] removing '/naranjelio/install/commsonboard/lib/python3.10/site-packages/commsonboard-0.0.0-py3.10.egg-info' (and everything under it)
+[0.987s] Copying ../../build/commsonboard/commsonboard.egg-info to /naranjelio/install/commsonboard/lib/python3.10/site-packages/commsonboard-0.0.0-py3.10.egg-info
+[0.988s] running install_scripts
+[1.018s] Installing angle_reader script to /naranjelio/install/commsonboard/lib/commsonboard
+[1.019s] writing list of installed files to '/naranjelio/build/commsonboard/install.log'
+[1.082s] Invoked command in '/naranjelio/src/commsonboard' returned '0': PYTHONPATH=/naranjelio/build/commsonboard/prefix_override:/naranjelio/install/commsonboard/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/commsonboard build --build-base /naranjelio/build/commsonboard/build install --record /naranjelio/build/commsonboard/install.log --single-version-externally-managed install_data
